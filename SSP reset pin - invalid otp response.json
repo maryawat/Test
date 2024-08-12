@@ -1,0 +1,104 @@
+{
+    "jsonrpc": "2.0",
+    "id": "e00e625e6d79465b9546935ac6d4477c",
+    "error": {
+        "code": -1,
+        "message": "Invalid OTP",
+        "errorPrint": "Invalid OTP",
+        "type": "identity.invalidOtp",
+        "title": "Error"
+    },
+    "debug": {
+        "stackInfo": [
+            "user.invalidCredentials: Invalid credentials",
+            "    at user.hash.check (/softwaregroup/almutakamila/mwallet/node_modules/ut-user/api/sql/schema/750$user.hash.check.sql:62:1) errno:50000",
+            "    at CustomUTError (/softwaregroup/almutakamila/mwallet/node_modules/ut-error/index.js:53:20)",
+            "    at /softwaregroup/almutakamila/mwallet/node_modules/ut-port-sql/index.js:1071:38",
+            "    at runMicrotasks (<anonymous>)",
+            "    at processTicksAndRejections (internal/process/task_queues.js:95:5)"
+        ],
+        "cause": {
+            "code": "EREQUEST",
+            "number": 50000,
+            "lineNumber": 92,
+            "state": 1,
+            "class": 16,
+            "serverName": "bgs-vws-db-08",
+            "procName": "core.errorStack",
+            "originalError": {
+                "info": {
+                    "number": 50000,
+                    "state": 1,
+                    "class": 16,
+                    "message": "user.invalidCredentials\n    at user.hash.check (/softwaregroup/almutakamila/mwallet/node_modules/ut-user/api/sql/schema/750$user.hash.check.sql:62:1) errno:50000",
+                    "serverName": "bgs-vws-db-08",
+                    "procName": "core.errorStack",
+                    "lineNumber": 92,
+                    "name": "ERROR",
+                    "event": "errorMessage"
+                }
+            },
+            "name": "RequestError",
+            "precedingErrors": [],
+            "storedProcedure": "[user].[hash.check]",
+            "params": {
+                "actorId": "1419",
+                "identifier": "967700000001",
+                "type": "otp",
+                "value": "4969",
+                "meta": {
+                    "auth": {
+                        "actorId": "1419"
+                    },
+                    "method": "user.hash.check",
+                    "opcode": "check",
+                    "mtid": "error",
+                    "requestHeaders": {
+                        "x-forwarded-host": "192.168.132.75:8081",
+                        "x-forwarded-proto": "http",
+                        "x-forwarded-port": "8081",
+                        "x-forwarded-for": "::ffff:192.168.129.170",
+                        "cookie": "ut5-cookie=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFubmVsIjoid2Vic3NwIiwibGFuZ3VhZ2UiOnsibGFuZ3VhZ2VJZCI6IjEiLCJpc28yQ29kZSI6ImVuIiwibmFtZSI6IkVuZ2xpc2giLCJsb2NhbGUiOiJlbl9HQiJ9LCJ0aW1lem9uZSI6IiswMDowMCIsInhzcmZUb2tlbiI6ImI4Njg0NDE3LTY2YWQtNDRiNS05ZmEwLTMxNWEzY2E3ZmEzMSIsImFjdG9ySWQiOiIxMTY2NiIsInNlc3Npb25JZCI6IjIxQkYxN0FBLUE2OEEtNDEwOS05QjYxLTZDODEyM0FCNDkzRiIsInNjb3BlcyI6W10sImlhdCI6MTcxMjA1ODkzNiwiZXhwIjoxNzEyMDYyNTM2fQ.CZQq7C4D5zL6XyUNEFaHFqL9NHPKvW9wtnwxj4FWsYE; xsrf-token=b8684417-66ad-44b5-9fa0-315a3ca7fa31",
+                        "accept-language": "en-US,en;q=0.9",
+                        "accept-encoding": "gzip, deflate",
+                        "referer": "http://192.168.132.75:8081/forgotPin",
+                        "origin": "http://192.168.132.75:8081",
+                        "content-type": "application/json",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
+                        "accept": "application/json, text/plain, */*",
+                        "content-length": "142",
+                        "connection": "close",
+                        "host": "192.168.132.75:9002",
+                        "clientip": "192.168.129.170"
+                    },
+                    "ipAddress": "::ffff:192.168.129.170",
+                    "frontEnd": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
+                    "localAddress": "192.168.132.75",
+                    "hostName": "192.168.132.75:8081",
+                    "localPort": 9002,
+                    "machineName": "bgs-vlx-ts-75",
+                    "os": "Linux:linux:3.10.0-1160.99.1.el7.x86_64",
+                    "version": "15.0.15",
+                    "serviceName": "almutakamila-mwallet",
+                    "tenantId": "1309",
+                    "subdomain": "almutakamila",
+                    "channel": "webssp",
+                    "trace": "1712059548952:bgs-vlx-ts-75:23291:lui6jt2z:10112",
+                    "$method": "mobileBanking.ott.getbyotp",
+                    "debug": true,
+                    "globalId": "5803bbf0-f0e9-11ee-b69e-830257574e84"
+                }
+            },
+            "fileName": "/softwaregroup/almutakamila/mwallet/node_modules/ut-user/api/sql/schema/750$user.hash.check.sql:1:1"
+        },
+        "print": "Invalid credentials",
+        "type": "identity.invalidOtp",
+        "method": [
+            "user.hash.check",
+            "mobileBanking.otp.verify",
+            "mobileBanking.ott.getbyotp",
+            "mobileBanking.ott.getbyotp"
+        ],
+        "errorPrint": "Invalid OTP"
+    }
+}

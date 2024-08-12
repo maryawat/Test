@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "chrome",
+            "name": "https://www.imbankgroup.com/ke/",
+            "request": "launch",
+            "url": "https://www.imbankgroup.com/ke/"
+        }
+    ]
+}
